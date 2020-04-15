@@ -1,0 +1,55 @@
+.find-more-box {
+    position: relative;
+
+    &::before {
+        @include svg-pattern(url(../../img/bg-pattern-how-we-work-desktop.svg), top right);
+        top: 0;
+        right: 0;
+        height: 100%;
+        
+        @media only screen and (max-width: 46.85em) {
+            background-image: url(../../img/bg-pattern-how-we-work-mobile.svg);
+        }
+    }
+
+    width: 100%;
+    background-color: $color-primary;
+    padding: 7.5rem;
+    margin: 10rem 0 9rem 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    
+    @media only screen and (max-width: 63.75em) {
+        margin: 5rem auto 4rem auto;
+        padding-top: 5rem;
+        width: 100%;
+    }
+
+    @media only screen and (max-width: 37.5em) {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        padding: 4rem 3rem;
+        margin: 2rem auto 6rem auto;
+
+        .btn {
+            margin: 3.5rem;
+        }
+    }
+
+    .heading-3 {
+        flex: 1 1 50%;
+        z-index: 5;
+
+        @media only screen and (max-width: 46.85em) {
+            flex: 0 1 50%;
+        }
+        @media only screen and (max-width: 37.5em) {
+            flex: 0 0 80%;
+            font-size: 3rem;
+        }
+    }
+}

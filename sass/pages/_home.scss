@@ -1,0 +1,116 @@
+.wrapper {
+    margin: 0 auto;
+    max-width: 112rem;
+
+    @media only screen and (max-width: 76.25em) {
+        margin: 0 3rem;
+    }
+}
+
+.logo-box {
+    height: 17.99px;
+    z-index: 2;
+}
+
+.main {
+    background-color: $color-primary;
+    padding: 15rem 0;
+    position: relative;
+
+    &::before {
+        @include svg-pattern(url(../../img/bg-pattern-intro-right-desktop.svg), top right);
+        top: 0;
+        right: 0;
+        height: 100%;
+    
+        @media only screen and (max-width: 63.75em) {
+            right: -15%;
+         }
+        @media only screen and (max-width: 46.85em) {
+            content: none;
+         }
+    }
+
+    @media only screen and (max-width: 46.85em) {
+        &::after {
+            @include svg-pattern(url(../../img/bg-pattern-intro-left-desktop.svg), center left);
+            top: 40%;
+            left: 0;
+            height: 40%;
+            z-index: 10;
+        }
+    }
+
+    @media only screen and (max-width: 46.85em) {
+        padding: 0;
+     }
+
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        @media only screen and (max-width: 46.85em) {
+            flex-direction: column;
+            justify-content: flex-start;
+
+        }
+        
+    }
+
+    &-text {
+        flex: 0 1 48%;
+        margin-right: 3rem;
+        position: relative;
+        z-index: 10;
+        
+        @media only screen and (max-width: 46.85em) {
+            flex: 0 1 100%;
+            padding: 13rem 3rem;
+            margin: 0;
+            text-align: center;
+        }
+        @media only screen and (max-width: 37.5em) {
+            flex: 0 1 100%;
+            padding: 13rem 0rem;
+            margin: 0;
+            text-align: center;
+        }
+        @media only screen and (max-width: 28em) {
+            padding: 7rem 0rem;
+         }
+    }
+
+    &-picture {
+        flex: 0 1 48%;
+        position: relative;
+        top: -6.3rem;
+
+        @media only screen and (max-width: 46.85em) {
+            flex: 0 0 100%;
+            order: -1;
+            top: 5rem;
+            max-height: 70%;
+            text-align: center;
+            z-index: 1;
+        }
+        @media only screen and (max-width: 37.5em) {
+            top: 0;
+            margin: 0 -3rem;
+            z-index: 50;
+        }
+
+        img {
+            max-width: 100%;
+            position: absolute;
+
+            @media only screen and (max-width: 46.85em) {
+                position: relative;
+                width: 100%;
+            }
+            @media only screen and (max-width: 28em) {
+                position: relative;
+                object-fit: cover;
+                width: 100%;
+            }
+        }
+    }
+}
