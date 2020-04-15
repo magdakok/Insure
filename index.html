@@ -13,35 +13,31 @@
     </head>
     <body>
 
-            <header class="header">
-                <div class="wrapper">
-                
-                    
-                        <div class="nav-container">
-                            <div class="logo-box">
-                                <img src="img/logo.svg" alt="Insure logo" class="logo">
-                            </div>
+        <header class="header">
+            <div class="wrapper">
+                    <div class="nav__container">
 
-                            <div class="navigation">
-                                <input type="checkbox" class="navigation-checkbox" id="navi-toggle">
-                                <label for="navi-toggle" class="navigation-button">
-                                    <span class="navigation-icon"><img src="img/icon-hamburger.svg" alt="Open menu" class="nav-open"><img src="img/icon-close.svg" alt="Close menu" class="nav-close"></span>
-                                </label>
-
-
-                            <ul class="header-nav-list">
-                                <li class="header-nav-item"><a href="#" class="header-nav-link">How we work</a></li>
-                                <li class="header-nav-item"><a href="#" class="header-nav-link">Blog</a></li>
-                                <li class="header-nav-item"><a href="#" class="header-nav-link">Account</a></li>
-                                <li class="header-nav-item"><a href="#"class="btn">View plans</a></li>
-                            </ul>
+                        <!-- there's same logo-box in the footer, so there's no "nav" prefix -->
+                        <div class="logo-box">
+                            <img src="img/logo.svg" alt="Insure logo" class="logo">
                         </div>
-                        
 
+                        <div class="nav__menu">
+                            <input type="checkbox" class="nav__checkbox" id="navi-toggle">
+                            <label for="navi-toggle" class="nav__button">
+                                <span class="nav__icon-box"><img src="img/icon-hamburger.svg" alt="Open menu" class="nav__icon--open"><img src="img/icon-close.svg" alt="Close menu" class="nav__icon--close"></span>
+                            </label>
+
+                        <ul class="nav__list">
+                            <li class="nav__item"><a href="#" class="nav__link">How we work</a></li>
+                            <li class="nav__item"><a href="#" class="nav__link">Blog</a></li>
+                            <li class="nav__item"><a href="#" class="nav__link">Account</a></li>
+                            <li class="nav__item"><a href="#"class="btn">View plans</a></li>
+                        </ul>
                     </div>
-                    
                 </div>
-            </header>    
+            </div>
+        </header>  
            
             <section class="main">
                 <div class="wrapper">
@@ -107,7 +103,6 @@
         
                     </div>
                 </div>
-
             </section>
             <footer class="footer">
                 <div class="wrapper">
