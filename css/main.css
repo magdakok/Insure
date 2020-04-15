@@ -411,6 +411,12 @@ body {
   }
 }
 
+
+.header .nav__link {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
 .header .nav__link:link, .header .nav__link:visited {
   text-decoration: none;
   letter-spacing: 2px;

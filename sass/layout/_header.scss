@@ -156,6 +156,8 @@
     }
 
     .nav__link {
+        transition: all 0.3s;
+        
         &:link,
         &:visited {
             text-decoration: none;
