@@ -1,0 +1,191 @@
+.header {
+    
+    font-size: 1.5rem;
+    color: $color-gray-dark;
+    text-transform: uppercase;
+
+    .wrapper {
+        @media only screen and (max-width: 37.5em) {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        } 
+    }
+
+    .logo-box {
+        position: relative;
+    }
+
+    .nav-container {
+        background-color: $color-white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+           
+        background-color: $color-white;
+        padding: 2.21rem 0;
+
+        @media only screen and (max-width: 76.25em) {
+            padding: 1.5rem 0;
+        }
+
+        @media only screen and (max-width: 37.5em) {
+            padding: 1.5rem 2rem;
+            margin: 0;          
+            position: fixed;
+            height: 5.8rem;
+            top: 0;
+            left: 0;  
+            width: 100%;
+            z-index: 9999;
+        }
+    }
+
+    .navigation {
+        display: flex;
+        align-items: center;
+
+        &-checkbox:checked ~ .header-nav-list {
+            display: flex;
+        }
+
+        &-checkbox:checked ~ .navigation-button .navigation-icon .nav-close {
+            display: inline-block;
+        }
+
+        &-checkbox:checked ~ .navigation-button .navigation-icon .nav-open {
+            display: none;
+        }
+    }
+
+    .navigation-checkbox {
+        position: absolute;
+        left: -9999px;
+    }
+
+    .navigation-button {
+        margin-top: 7px;
+    }
+
+    .navigation-icon {
+        
+        cursor: pointer;
+
+       .nav-close {
+           display: none;
+       }
+    }
+
+        .navigation-checkbox,
+        .navigation-button,
+        .navigation-icon
+        {
+        opacity:0;
+        height: 0;
+        overflow: hidden;
+
+        @media only screen and (max-width: 37.5em) {
+            opacity: 1;
+            height: auto;
+            overflow: hidden;
+        }
+    }
+
+    .header-nav-list {
+        display: flex;
+        list-style: none;
+
+        @media only screen and (max-width: 46.85em) {
+            font-size: 1.2rem;
+        }
+
+        @media only screen and (max-width: 37.5em) {
+            display: none;
+            background-color: $color-primary-dark;
+        
+            top: 5.8rem;
+            left: 0;
+            width: 100%;
+            height: calc(100% - 58px);
+            z-index: 500;
+            position: fixed;
+            padding-top: 10rem;
+
+            flex-direction: column;
+
+            justify-content: flex-start;
+            align-items: center;
+
+            &::before {
+                @include svg-pattern(url(../../img/bg-pattern-mobile-nav.svg), bottom right);
+                background-size: cover;
+                bottom: -10%;
+                right: 0;
+                height: 50%;
+            }
+        }
+    }
+
+    .header-nav-item {
+        &:not(:last-child) {
+            margin-right: 1.8rem;
+        }
+        @media only screen and (max-width: 37.5em) {
+            margin-bottom: 3rem;
+            color: $color-white;
+            font-size: 2rem;
+            width: 80%;
+            text-align: center;
+
+            &:not(:last-child) {
+                margin-right: 0;
+            }
+
+            .btn {
+                background-color: transparent;
+                border: 2px solid $color-white;
+               
+
+                &:link,
+                &:visited {
+                color: $color-white;
+                }
+                &:hover,
+                &:active {
+                    background-color: $color-white;
+                    border: 2px solid $color-white;
+                    color: $color-black;
+                }
+            }
+        }
+    }
+
+    .header-nav-link {
+        &:link,
+        &:visited {
+            text-decoration: none;
+            letter-spacing: 2px;
+            color: $color-gray-dark;
+        }
+
+        &:hover,
+        &:active {
+            color: $color-primary-dark;
+        }
+
+        @media only screen and (max-width: 37.5em) {
+            &:link,
+            &:visited {
+                text-decoration: none;
+                letter-spacing: 2px;
+                color: $color-white;
+            }
+    
+            &:hover,
+            &:active {
+                color: $color-white;
+                text-decoration: underline;
+            }
+        }
+    }
+}
