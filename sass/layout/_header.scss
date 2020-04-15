@@ -16,7 +16,7 @@
         position: relative;
     }
 
-    .nav-container {
+    .nav__container {
         background-color: $color-white;
         display: flex;
         justify-content: space-between;
@@ -28,7 +28,6 @@
         @media only screen and (max-width: 76.25em) {
             padding: 1.5rem 0;
         }
-
         @media only screen and (max-width: 37.5em) {
             padding: 1.5rem 2rem;
             margin: 0;          
@@ -41,45 +40,42 @@
         }
     }
 
-    .navigation {
+    .nav__menu {
         display: flex;
         align-items: center;
 
-        &-checkbox:checked ~ .header-nav-list {
+        .nav__checkbox:checked ~ .nav__list {
             display: flex;
         }
-
-        &-checkbox:checked ~ .navigation-button .navigation-icon .nav-close {
+        .nav__checkbox:checked ~ .nav__button .nav__icon-box .nav__icon--close {
             display: inline-block;
         }
-
-        &-checkbox:checked ~ .navigation-button .navigation-icon .nav-open {
+        .nav__checkbox:checked ~ .nav__button .nav__icon-box .nav__icon--open {
             display: none;
         }
     }
 
-    .navigation-checkbox {
+    .nav__checkbox {
         position: absolute;
         left: -9999px;
     }
 
-    .navigation-button {
+    .nav__button {
         margin-top: 7px;
     }
 
-    .navigation-icon {
+    .nav__icon-box {
         
         cursor: pointer;
 
-       .nav-close {
+        .nav__icon--close {
            display: none;
        }
     }
 
-        .navigation-checkbox,
-        .navigation-button,
-        .navigation-icon
-        {
+        .nav__checkbox,
+        .nav__button,
+        .nav__icon-box {
         opacity:0;
         height: 0;
         overflow: hidden;
@@ -91,14 +87,13 @@
         }
     }
 
-    .header-nav-list {
+    .nav__list {
         display: flex;
         list-style: none;
 
         @media only screen and (max-width: 46.85em) {
             font-size: 1.2rem;
         }
-
         @media only screen and (max-width: 37.5em) {
             display: none;
             background-color: $color-primary-dark;
@@ -126,7 +121,7 @@
         }
     }
 
-    .header-nav-item {
+    .nav__item {
         &:not(:last-child) {
             margin-right: 1.8rem;
         }
@@ -160,7 +155,9 @@
         }
     }
 
-    .header-nav-link {
+    .nav__link {
+        transition: all 0.3s;
+        
         &:link,
         &:visited {
             text-decoration: none;
