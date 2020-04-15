@@ -238,7 +238,7 @@ body {
   position: relative;
 }
 
-.header .nav-container {
+.header .nav__container {
   background-color: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -254,13 +254,13 @@ body {
 }
 
 @media only screen and (max-width: 76.25em) {
-  .header .nav-container {
+  .header .nav__container {
     padding: 1.5rem 0;
   }
 }
 
 @media only screen and (max-width: 37.5em) {
-  .header .nav-container {
+  .header .nav__container {
     padding: 1.5rem 2rem;
     margin: 0;
     position: fixed;
@@ -272,7 +272,7 @@ body {
   }
 }
 
-.header .navigation {
+.header .nav__menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -281,56 +281,56 @@ body {
           align-items: center;
 }
 
-.header .navigation-checkbox:checked ~ .header-nav-list {
+.header .nav__menu .nav__checkbox:checked ~ .nav__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.header .navigation-checkbox:checked ~ .navigation-button .navigation-icon .nav-close {
+.header .nav__menu .nav__checkbox:checked ~ .nav__button .nav__icon-box .nav__icon--close {
   display: inline-block;
 }
 
-.header .navigation-checkbox:checked ~ .navigation-button .navigation-icon .nav-open {
+.header .nav__menu .nav__checkbox:checked ~ .nav__button .nav__icon-box .nav__icon--open {
   display: none;
 }
 
-.header .navigation-checkbox {
+.header .nav__checkbox {
   position: absolute;
   left: -9999px;
 }
 
-.header .navigation-button {
+.header .nav__button {
   margin-top: 7px;
 }
 
-.header .navigation-icon {
+.header .nav__icon-box {
   cursor: pointer;
 }
 
-.header .navigation-icon .nav-close {
+.header .nav__icon-box .nav__icon--close {
   display: none;
 }
 
-.header .navigation-checkbox,
-.header .navigation-button,
-.header .navigation-icon {
+.header .nav__checkbox,
+.header .nav__button,
+.header .nav__icon-box {
   opacity: 0;
   height: 0;
   overflow: hidden;
 }
 
 @media only screen and (max-width: 37.5em) {
-  .header .navigation-checkbox,
-  .header .navigation-button,
-  .header .navigation-icon {
+  .header .nav__checkbox,
+  .header .nav__button,
+  .header .nav__icon-box {
     opacity: 1;
     height: auto;
     overflow: hidden;
   }
 }
 
-.header .header-nav-list {
+.header .nav__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -338,13 +338,13 @@ body {
 }
 
 @media only screen and (max-width: 46.85em) {
-  .header .header-nav-list {
+  .header .nav__list {
     font-size: 1.2rem;
   }
 }
 
 @media only screen and (max-width: 37.5em) {
-  .header .header-nav-list {
+  .header .nav__list {
     display: none;
     background-color: #2b272f;
     top: 5.8rem;
@@ -365,7 +365,7 @@ body {
         -ms-flex-align: center;
             align-items: center;
   }
-  .header .header-nav-list::before {
+  .header .nav__list::before {
     content: '';
     background-image: url(../../img/bg-pattern-mobile-nav.svg);
     background-position: bottom right;
@@ -382,52 +382,52 @@ body {
   }
 }
 
-.header .header-nav-item:not(:last-child) {
+.header .nav__item:not(:last-child) {
   margin-right: 1.8rem;
 }
 
 @media only screen and (max-width: 37.5em) {
-  .header .header-nav-item {
+  .header .nav__item {
     margin-bottom: 3rem;
     color: #ffffff;
     font-size: 2rem;
     width: 80%;
     text-align: center;
   }
-  .header .header-nav-item:not(:last-child) {
+  .header .nav__item:not(:last-child) {
     margin-right: 0;
   }
-  .header .header-nav-item .btn {
+  .header .nav__item .btn {
     background-color: transparent;
     border: 2px solid #ffffff;
   }
-  .header .header-nav-item .btn:link, .header .header-nav-item .btn:visited {
+  .header .nav__item .btn:link, .header .nav__item .btn:visited {
     color: #ffffff;
   }
-  .header .header-nav-item .btn:hover, .header .header-nav-item .btn:active {
+  .header .nav__item .btn:hover, .header .nav__item .btn:active {
     background-color: #ffffff;
     border: 2px solid #ffffff;
     color: #2d2a31;
   }
 }
 
-.header .header-nav-link:link, .header .header-nav-link:visited {
+.header .nav__link:link, .header .nav__link:visited {
   text-decoration: none;
   letter-spacing: 2px;
   color: #837d87;
 }
 
-.header .header-nav-link:hover, .header .header-nav-link:active {
+.header .nav__link:hover, .header .nav__link:active {
   color: #2b272f;
 }
 
 @media only screen and (max-width: 37.5em) {
-  .header .header-nav-link:link, .header .header-nav-link:visited {
+  .header .nav__link:link, .header .nav__link:visited {
     text-decoration: none;
     letter-spacing: 2px;
     color: #ffffff;
   }
-  .header .header-nav-link:hover, .header .header-nav-link:active {
+  .header .nav__link:hover, .header .nav__link:active {
     color: #ffffff;
     text-decoration: underline;
   }
@@ -786,6 +786,10 @@ body {
   background-color: #2d2a31;
   position: absolute;
   opacity: 1;
+}
+
+body {
+  background-color: #ffffff;
 }
 
 .wrapper {
