@@ -14,3 +14,4 @@ Challenge by [frontendmentor.io](https://www.frontendmentor.io/) to build out a 
 ### Still to improve:
 * classes naming (will use BEM methodology)
 * animated mobile navbar
+* add prefixes
