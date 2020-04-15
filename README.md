@@ -1,5 +1,14 @@
 # INSURE
 
-https://insure-challenge.netlify.com/
+## :movie_camera: https://insure-challenge.netlify.com/
 
-Challenge by frontendmentor.io to build out a landing page basing on the design (images and svg icons provided).
+Challenge by [frontendmentor.io](https://www.frontendmentor.io/challenges/insure-landing-page-uTU68JV8) to build out a landing page basing on the design (images and svg icons provided). 
+
+### My goals:
+* build fully responsive website (breakpoints are set wherever the design breaks)
+* practise using SASS pre-processor
+* write clean and reusable code
+
+### Still to improve:
+* classes naming (will use BEM methodology)
+* animated mobile navbar
